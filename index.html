@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nallaganti Tarakarama - Aspiring Data Analyst & BBA Student proficient in Python, SQL, Power BI, and Advanced Excel. Explore analytical projects and technical competencies.">
+    <meta name="keywords" content="Nallaganti Tarakarama, Data Analyst, Business Intelligence, Python, SQL, Power BI, Advanced Excel, EDA, Hyderabad">
+    <meta name="author" content="Nallaganti Tarakarama">
+    <title>Nallaganti Tarakarama | Data Analyst Portfolio</title>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Nallaganti Tarakarama | Data Analyst Portfolio">
+    <meta property="og:description" content="Detail-oriented Data Analyst adept at extracting actionable insights through Python, SQL, Power BI, and Advanced Excel.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Nallaganti Tarakarama Home">
+                <span class="monogram">NT</span>
+                <span class="brand-text">Tarakarama<span class="dot">.</span>data</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#highlights" class="nav-link">Highlights</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="assets/resume.pdf" class="btn btn-outline nav-btn" download target="_blank" rel="noopener">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Resume</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background-grid"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Seeking Entry-Level Data Analyst Roles
+                    </div>
+                    <h1 class="hero-title">
+                        Nallaganti <span class="highlight-text">Tarakarama</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Business Administration Student &amp; Analytical Data Analyst
+                    </p>
+                    <p class="hero-description">
+                        Specializing in extracting actionable insights from complex datasets using Python, SQL, Power BI, and Advanced Excel to support data-driven decision-making.
+                    </p>
+
+                    <div class="hero-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Hyderabad, India</span>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>View Analytics Projects</span>
+                        </a>
+                        <a href="assets/resume.pdf" class="btn btn-secondary" download target="_blank" rel="noopener">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-card-visual">
+                    <div class="data-console-card">
+                        <div class="console-header">
+                            <span class="dot-control red"></span>
+                            <span class="dot-control yellow"></span>
+                            <span class="dot-control green"></span>
+                            <span class="console-title">analytics_pipeline.sql</span>
+                        </div>
+                        <div class="console-body">
+<pre><code><span class="sql-keyword">SELECT</span> department, 
+       <span class="sql-func">COUNT</span>(employee_id) <span class="sql-keyword">AS</span> total_staff,
+       <span class="sql-func">ROUND</span>(<span class="sql-func">AVG</span>(performance_score), 2) <span class="sql-keyword">AS</span> avg_kpi
+<span class="sql-keyword">FROM</span> enterprise_data
+<span class="sql-keyword">WHERE</span> status = <span class="sql-string">'Active'</span>
+<span class="sql-keyword">GROUP BY</span> department
+<span class="sql-keyword">HAVING</span> avg_kpi > 8.5
+<span class="sql-keyword">ORDER BY</span> avg_kpi <span class="sql-keyword">DESC</span>;</code></pre>
+                        </div>
+                        <div class="console-footer">
+                            <span class="status-indicator"><i class="fa-solid fa-check"></i> Query Executed: 0.012s</span>
+                            <span class="status-badge">Data Integrity verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Overview</span>
+                    <h2 class="section-title">Professional Summary</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <p class="lead-text">
+                            Detail-oriented and analytical Business Administration student with a strong foundation in data analysis, statistical modeling, and visualization techniques.
+                        </p>
+                        <p class="body-text">
+                            Proficient in Python, SQL, Power BI, and Advanced Excel. Adept at extracting actionable insights from complex datasets to support data-driven decision-making. Seeking an entry-level Data Analyst role to leverage analytical skills and contribute to business growth.
+                        </p>
+                    </div>
+
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <i class="fa-solid fa-graduation-cap stat-icon"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">BBA</span>
+                                <span class="stat-label">Pragati Mahavidyalaya</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-code stat-icon"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">Python &amp; SQL</span>
+                                <span class="stat-label">Core Querying &amp; Scripts</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-chart-pie stat-icon"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">Power BI</span>
+                                <span class="stat-label">Interactive Dashboards</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fa-solid fa-table-cells stat-icon"></i>
+                            <div class="stat-info">
+                                <span class="stat-value">Advanced Excel</span>
+                                <span class="stat-label">Pivot Tables &amp; DAX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Core Technical &amp; Analytical Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming & Querying -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-terminal category-icon"></i>
+                            <h3>Programming &amp; Querying</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><i class="fa-brands fa-python"></i> Python</li>
+                            <li><i class="fa-solid fa-box"></i> Pandas</li>
+                            <li><i class="fa-solid fa-calculator"></i> NumPy</li>
+                            <li><i class="fa-solid fa-chart-simple"></i> Matplotlib</li>
+                            <li><i class="fa-solid fa-database"></i> SQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Visualization & BI -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-chart-column category-icon"></i>
+                            <h3>Data Visualization &amp; BI</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><i class="fa-solid fa-chart-gantt"></i> Power BI</li>
+                            <li><i class="fa-solid fa-sliders"></i> Interactive Dashboards</li>
+                            <li><i class="fa-solid fa-file-invoice"></i> Data Reporting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Analytics & Spreadsheets -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-table category-icon"></i>
+                            <h3>Analytics &amp; Spreadsheets</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><i class="fa-solid fa-file-excel"></i> Advanced Excel</li>
+                            <li><i class="fa-solid fa-table-list"></i> Pivot Tables</li>
+                            <li><i class="fa-solid fa-magnifying-glass-chart"></i> VLOOKUP / XLOOKUP</li>
+                            <li><i class="fa-solid fa-diagram-project"></i> Data Modeling</li>
+                            <li><i class="fa-solid fa-code-branch"></i> DAX Expressions</li>
+                        </ul>
+                    </div>
+
+                    <!-- Core Competencies -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <i class="fa-solid fa-brain category-icon"></i>
+                            <h3>Core Competencies</h3>
+                        </div>
+                        <ul class="skill-tags">
+                            <li><i class="fa-solid fa-broom"></i> Data Cleaning</li>
+                            <li><i class="fa-solid fa-magnifying-glass"></i> Exploratory Data Analysis (EDA)</li>
+                            <li><i class="fa-solid fa-square-root-variable"></i> Statistical Analysis</li>
+                            <li><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> Feature Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Academic Data Analytics Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-type"><i class="fa-solid fa-code"></i> Data Pipeline &amp; EDA</span>
+                            <h3 class="project-title">Exploratory Data Analysis (EDA) using Python &amp; SQL</h3>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                Comprehensive analytics framework built to extract actionable operational insights and transform structured datasets for strategic executive decision-making.
+                            </p>
+                            <ul class="project-highlights">
+                                <li>Cleaned, transformed, and analyzed structured datasets to identify trends, outliers, and key operational insights.</li>
+                                <li>Formulated optimized SQL queries and Python scripts to aggregate raw data into concise executive summary reports.</li>
+                                <li>Performed feature engineering and statistical checks to ensure high data integrity for accurate reporting.</li>
+                            </ul>
+                        </div>
+                        <div class="project-footer">
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Pandas</span>
+                                <span>Matplotlib</span>
+                                <span>EDA</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-type"><i class="fa-solid fa-chart-line"></i> Business Intelligence</span>
+                            <h3 class="project-title">Business Intelligence Dashboard using Power BI &amp; Excel</h3>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-description">
+                                End-to-end interactive reporting system designed to monitor performance indicators, reduce manual overhead, and visualize sales trends.
+                            </p>
+                            <ul class="project-highlights">
+                                <li>Designed interactive BI dashboards to visually track and evaluate key performance indicators (KPIs) and monthly sales metrics.</li>
+                                <li>Leveraged Advanced Excel functions and Power BI DAX expressions to streamline multi-source data processing pipelines.</li>
+                                <li>Automated data refresh models, significantly reducing manual reporting overhead.</li>
+                            </ul>
+                        </div>
+                        <div class="project-footer">
+                            <div class="tech-stack">
+                                <span>Power BI</span>
+                                <span>Advanced Excel</span>
+                                <span>DAX</span>
+                                <span>Pivot Tables</span>
+                                <span>KPI Tracking</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <div>
+                                <h3 class="edu-degree">Bachelor of Business Administration (BBA)</h3>
+                                <p class="edu-institution">Pragati Mahavidyalaya, Hyderabad</p>
+                            </div>
+                            <span class="edu-badge"><i class="fa-regular fa-calendar"></i> Expected Graduation: 2027</span>
+                        </div>
+                        <p class="edu-description">
+                            Combining foundational business principles with advanced technical coursework in data analytics, statistical decision-making, and financial visualization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Professional Credentials</span>
+                    <h2 class="section-title">Certifications &amp; Professional Focus</h2>
+                </div>
+
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-status-badge in-progress">In Progress</div>
+                        <div class="cert-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 class="cert-title">Data Analysis with Python / SQL Certification</h3>
+                        <p class="cert-domain">Data Visualization &amp; Business Analytics Focus</p>
+                        <p class="cert-desc">
+                            Focused on mastering end-to-end data pipelines, complex relational database querying, relational algebra, and automated exploratory analysis scripts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Highlights -->
+        <section id="highlights" class="section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Value Proposition</span>
+                    <h2 class="section-title">Career Strengths &amp; Focus</h2>
+                </div>
+
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-filter-circle-dollar highlight-icon"></i>
+                        <h3>Data Integrity &amp; Engineering</h3>
+                        <p>Specialized in performing rigorous feature engineering and statistical validation to guarantee accurate analytical reporting.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-gears highlight-icon"></i>
+                        <h3>Process Automation</h3>
+                        <p>Adept at engineering automated data refresh models in Power BI and Excel to eliminate manual processing overhead.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-chart-pie highlight-icon"></i>
+                        <h3>Executive Dashboarding</h3>
+                        <p>Capable of transforming raw multi-source business data into clear visual KPIs tailored for stakeholder decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Contact &amp; Connect</h2>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info-card">
+                        <h3>Let's discuss how my analytical skills can drive value.</h3>
+                        <p>I am actively seeking entry-level Data Analyst opportunities and internships where I can apply Python, SQL, Power BI, and Advanced Excel to real-world business challenges.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span class="label">Location</span>
+                                    <span class="value">Hyderabad, India</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <span class="label">Phone</span>
+                                    <a href="tel:+916304696512" class="value link">+91 6304696512</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-box"><i class="fa-solid fa-user"></i></div>
+                                <div>
+                                    <span class="label">Status</span>
+                                    <span class="value">BBA Student (Graduation 2027)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-action-box">
+                            <a href="assets/resume.pdf" class="btn btn-primary" download target="_blank" rel="noopener">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <span>Download Full PDF Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="monogram">NT</span>
+                <div>
+                    <p class="footer-name">Nallaganti Tarakarama</p>
+                    <p class="footer-role">Data Analyst | BBA Candidate</p>
+                </div>
+            </div>
+            
+            <p class="footer-copy">
+                &copy; <span id="currentYear"></span> Nallaganti Tarakarama. All rights reserved.
+            </p>
+            
+            <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
